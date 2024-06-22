@@ -10,7 +10,7 @@ void grilla (int posXcuad, int posYcuad, int tamcuad, color b, color n, color cu
       float centroX = posXcuad + tamcuad / 2;
       float centroY = posYcuad + tamcuad / 2;
 
-      float tono = map (mouseX, 0, width*6, 0, 255);
+      float tono = map (mouseX, 0, width*10, 0, 255);
       float d = dist(mouseX, mouseY, centroX, centroY);
       
       if (d < 35) {  
@@ -46,4 +46,12 @@ void grilla (int posXcuad, int posYcuad, int tamcuad, color b, color n, color cu
       }
     }
   }
+}
+void reiniciarVar (int tamcuad, color b, color n, int cuadr){
+    tamcuad= 20;
+    b= color(255);
+    n= color (0);
+    cuadr= color (0);
+    mouseY= 0;
+    mouseX=0;
 }
