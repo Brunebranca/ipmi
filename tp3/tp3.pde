@@ -6,6 +6,7 @@ int tamcuad;
 color b;
 color n;
 color cuadr;
+float x1, y1, x2, y2;
 void setup() {
   size (800, 400);
   Opart= loadImage ("Opart.jpg");
@@ -29,6 +30,9 @@ void draw () {
   }
   if ((keyPressed == true) && (key == '-') && (tamcuad > 20)) {
     tamcuad--;
+  } 
+  if (reiniciar(key)) {
+    reiniciarVar(20, b, n, cuadr);
   }
 }
 
@@ -36,14 +40,13 @@ void mousePressed() {
   cuadr = color(random(127), random(0), random(0));
 }
 
-// evento reinicio de variables
+boolean reiniciar(char tecla) {
+  return tecla == 'r';
+}
+
 void keyPressed(){
     if (key == 'r') {
-    tamcuad = 20;
-    b= color(255);
-    n= color (0);
-    cuadr= color (0);
-    mouseY= 0;
-    mouseX=0;
+    reiniciarVar(20, b, n, cuadr);
   }
 }
+
