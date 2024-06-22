@@ -43,6 +43,8 @@ void keyPressed(){
     b= color(255);
     n= color (0);
     cuadr= color (0);
+    mouseY= 0;
+    mouseX=0;
   }
 }
   
