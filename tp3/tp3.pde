@@ -1,12 +1,11 @@
-//https://youtu.be/RrjoUOaPDcM
+//https://youtu.be/Ly08rfnTqdA
 PImage Opart;
 int posXcuad;
 int posYcuad;
 int tamcuad;    
-color b;
+color b;  
 color n;
 color cuadr;
-float x1, y1, x2, y2;
 void setup() {
   size (800, 400);
   Opart= loadImage ("Opart.jpg");
@@ -32,7 +31,7 @@ void draw () {
     tamcuad--;
   } 
   if (reiniciar(key)) {
-    reiniciarVar(20, b, n, cuadr);
+    reinicioDeVar();
   }
 }
 
@@ -44,9 +43,17 @@ boolean reiniciar(char tecla) {
   return tecla == 'r';
 }
 
-void keyPressed(){
-    if (key == 'r') {
-    reiniciarVar(20, b, n, cuadr);
-  }
+  void reinicioDeVar (){
+      tamcuad = 20;
+      b= color(255);
+      n= color (0);
+      cuadr= color (0);
+      mouseY= 0;
+      mouseX=0;
 }
 
+void keyPressed(){
+    if (key == 'r') {    
+    reinicioDeVar();
+  }
+}
