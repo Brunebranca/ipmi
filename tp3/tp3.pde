@@ -1,8 +1,8 @@
-//https://youtu.be/VpTmXZLZ02k
+//https://youtu.be/RrjoUOaPDcM
 PImage Opart;
 int posXcuad;
 int posYcuad;
-int tamcuad;  
+int tamcuad;    
 color b;
 color n;
 color cuadr;
@@ -14,7 +14,7 @@ void setup() {
   b= color(255);
   n= color (0);
   cuadr = color (random (128), random (0), random (0));
-}
+}  
 void draw () {
   background (255);
   image (Opart, 0, 0);
@@ -47,4 +47,3 @@ void keyPressed(){
     mouseX=0;
   }
 }
-  
