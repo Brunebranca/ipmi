@@ -47,11 +47,3 @@ void grilla (int posXcuad, int posYcuad, int tamcuad, color b, color n, color cu
     }
   }
 }
-void reiniciarVar (int tamcuad, color b, color n, int cuadr){
-    tamcuad= 20;
-    b= color(255);
-    n= color (0);
-    cuadr= color (0);
-    mouseY= 0;
-    mouseX=0;
-}
